@@ -1,0 +1,1 @@
+ha una categoria (composizione)
