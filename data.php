@@ -46,3 +46,8 @@ $prodotti = [
         "25 Kg"
     )
 ];
+foreach ($prodotti as $value) {
+    if ($value instanceof Cibo || $value instanceof Gioco) {
+        $value->availability = "Si";
+    }
+}

@@ -3,12 +3,13 @@ figlio di prodotto, quindi prodotto extends -->
 <?php
 
 require_once __DIR__ . '/Prodotto.php';
-
+require_once __DIR__ . '/Disponibilità.php';
 class Cuccia extends Prodotto
 {
     public $description;
     public $color;
     public $size;
+    use Disponibilità;
 
     public function __construct($image, $title, $price, Category $category, $description, $color, $size)
     {
