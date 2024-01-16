@@ -9,4 +9,11 @@ class Gioco extends Prodotto
 {
     public $description;
     public $color;
+
+    public function __construct($image, $title, $price, Category $category, $description, $color)
+    {
+        parent::__construct($image, $title, $price, $category);
+        $this->description = $description;
+        $this->color = $color;
+    }
 }

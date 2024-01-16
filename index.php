@@ -22,19 +22,13 @@ require __DIR__ . '/data.php';
                 <div class="col-3">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">
-                                <?= $prodotto->image . "<br>" . $prodotto->title . "<br>" . $prodotto->price ?>
-
-                            </h5>
-                            <h6 class="card-subtitle mb-2 text-muted">
-                                <!-- nullsafe operator -->
-                                <?= $prodotto->category?->productType . "<br>"; ?>
-                                <?= $prodotto->description . "<br>"; ?>
-                                <?php echo isset($prodotto->color) ? "Colore: " . $prodotto->color : "" . "<br>"; ?>
-                                <?php echo isset($prodotto->weight) ? "Peso: " . $prodotto->weight : "" . "<br>"; ?>
-                                <?php echo isset($prodotto->size) ? "Peso: " . $prodotto->size : "" . "<br>"; ?>
-
-                            </h6>
+                            <h5 class="card-title mb-4"><?= $prodotto->image . "<br>" . $prodotto->title . "<br>" ?></h5>
+                            <h6 class="card-subtitle mb-2 text-muted"><?= get_class($prodotto) . " per " . $prodotto->category?->getItemType() . "<br>"; ?></h6>
+                            <h6 class="card-subtitle mb-2 text-muted"><?= $prodotto->description . "<br>"; ?></h6>
+                            <h6 class="card-subtitle mb-2 text-muted"><?php echo isset($prodotto->color) ? "Colore: " . $prodotto->color : "" . "<br>"; ?></h6>
+                            <h6 class="card-subtitle mb-2 text-muted"><?php echo isset($prodotto->weight) ? "Peso: " . $prodotto->weight : "" . "<br>"; ?></h6>
+                            <h6 class="card-subtitle mb-2 text-muted"><?php echo isset($prodotto->size) ? "Dimensioni: " . $prodotto->size : "" . "<br>"; ?></h6>
+                            <h5><?= $prodotto->price ?></h5>
                         </div>
                     </div>
                 </div>

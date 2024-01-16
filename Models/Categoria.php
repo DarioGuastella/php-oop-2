@@ -1,7 +1,7 @@
 <?php
 class Category
 {
-    public $productType;
+    private $productType;
 
     public function __construct($productType)
     {

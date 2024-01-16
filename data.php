@@ -5,45 +5,44 @@ require_once __DIR__ . '/Models/Cibo.php';
 require_once __DIR__ . '/Models/Cuccia.php';
 require_once __DIR__ . '/Models/Gioco.php';
 
-//Creo un array in cui ogni elemento è un'istanza di User
+$cats = new Category("Gatti");
+$dogs = new Category("Cani");
+$cats_card_img = "<img src='https://picsum.photos/id/40/270'>";
+$dogs_card_img = "<img src='https://picsum.photos/id/237/270'>";
+
+
 $prodotti = [
     new Cibo(
-        '<img src="https://picsum.photos/id/40/270">',
+        $cats_card_img,
         "Croccantini al tonno",
         "25,00€",
-        new Category("Gatti")
+        $cats,
+        "Golosi croccantini al tonno, ideali per gatti a pelo lungo",
+        "10 Kg"
     ),
     new Cuccia(
-        '<img src="https://picsum.photos/id/237/270">',
-        "Cuccia per cani",
+        $dogs_card_img,
+        "Real Estate 90",
         "80,00€",
-        new Category("Cani")
+        $dogs,
+        "Elegante cuccia, ideale per interni.",
+        "Color legno, tetto rosso",
+        "100x150x90"
     ),
     new Gioco(
-        '<img src="https://picsum.photos/id/40/270">',
+        $cats_card_img,
         "Topolino di gomma",
         "5,00€",
-        new Category("Gatti")
+        $cats,
+        "Simpatico topolino in gomma, ideale per il tuo amico felino.",
+        "Grigio"
     ),
     new Cibo(
-        '<img src="https://picsum.photos/id/237/270">',
+        $dogs_card_img,
         "Crocchette al Pollo",
         "50,00€",
-        new Category("Cani")
+        $dogs,
+        "Golose crocchette al pollo, ideali per cani di media taglia",
+        "25 Kg"
     )
 ];
-//Cibo
-$prodotti[0]->description = "Golosi croccantini al tonno, ideali per gatti a pelo lungo";
-$prodotti[0]->weight = "10 Kg";
-
-$prodotti[3]->description = "Golose crocchette al pollo, ideali per cani di media taglia";
-$prodotti[3]->weight = "25 Kg";
-
-//Cuccia
-$prodotti[1]->description = "Elegante cuccia, ideale per interni.";
-$prodotti[1]->color = "Color legno, tetto rosso";
-$prodotti[1]->size = "100x150x90";
-
-//Gioco
-$prodotti[2]->description = "Simpatico topolino in gomma, ideale per il tuo amico felino.";
-$prodotti[2]->color = "Grigio";

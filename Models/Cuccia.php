@@ -9,4 +9,12 @@ class Cuccia extends Prodotto
     public $description;
     public $color;
     public $size;
+
+    public function __construct($image, $title, $price, Category $category, $description, $color, $size)
+    {
+        parent::__construct($image, $title, $price, $category);
+        $this->description = $description;
+        $this->color = $color;
+        $this->size = $size;
+    }
 }
