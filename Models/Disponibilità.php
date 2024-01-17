@@ -6,7 +6,7 @@ trait Disponibilità
     public function isAvailable()
     {
         $result = "No";
-        if ($this->availability) {
+        if ($this->availability == "Disponibile") {
             $result = "Si";
         }
         return $result;

@@ -1,4 +1,4 @@
-<img src="">
+
 <?php
 
 require_once __DIR__ . '/Models/Cibo.php';
@@ -18,7 +18,8 @@ $prodotti = [
         "25,00€",
         $cats,
         "Golosi croccantini al tonno, ideali per gatti a pelo lungo",
-        "10 Kg"
+        "10 Kg",
+        "Disponibile"
     ),
     new Cuccia(
         $dogs_card_img,
@@ -27,7 +28,8 @@ $prodotti = [
         $dogs,
         "Elegante cuccia, ideale per interni.",
         "Color legno, tetto rosso",
-        "100x150x90"
+        "100x150x90",
+        "Non disponibile"
     ),
     new Gioco(
         $cats_card_img,
@@ -35,7 +37,8 @@ $prodotti = [
         "5,00€",
         $cats,
         "Simpatico topolino in gomma, ideale per il tuo amico felino.",
-        "Grigio"
+        "Grigio",
+        "Disponibile"
     ),
     new Cibo(
         $dogs_card_img,
@@ -43,11 +46,14 @@ $prodotti = [
         "50,00€",
         $dogs,
         "Golose crocchette al pollo, ideali per cani di media taglia",
-        "25 Kg"
+        "25 Kg",
+        "Disponibile"
     )
 ];
-foreach ($prodotti as $value) {
-    if ($value instanceof Cibo || $value instanceof Gioco) {
-        $value->availability = "Si";
-    }
-}
+
+
+// foreach ($prodotti as $value) {
+//     if ($value instanceof Cibo || $value instanceof Gioco) {
+//         $value->availability = "Si";
+//     }
+// }
