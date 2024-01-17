@@ -19,7 +19,7 @@ $prodotti = [
         $cats,
         "Golosi croccantini al tonno, ideali per gatti a pelo lungo",
         "10 Kg",
-        "Disponibile"
+        "Si"
     ),
     new Cuccia(
         $dogs_card_img,
@@ -29,7 +29,7 @@ $prodotti = [
         "Elegante cuccia, ideale per interni.",
         "Color legno, tetto rosso",
         "100x150x90",
-        "Non disponibile"
+        "No"
     ),
     new Gioco(
         $cats_card_img,
@@ -38,7 +38,7 @@ $prodotti = [
         $cats,
         "Simpatico topolino in gomma, ideale per il tuo amico felino.",
         "Grigio",
-        "Disponibile"
+        "Si"
     ),
     new Cibo(
         $dogs_card_img,
@@ -47,7 +47,7 @@ $prodotti = [
         $dogs,
         "Golose crocchette al pollo, ideali per cani di media taglia",
         "25 Kg",
-        "Disponibile"
+        "Si"
     )
 ];
 

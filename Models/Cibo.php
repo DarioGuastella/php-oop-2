@@ -12,7 +12,7 @@ class Cibo extends Prodotto
     public $weight;
     use Disponibilità;
 
-    public function __construct($image, $title, $price, Category $category, $description, $weight, $availability)
+    public function __construct($image, $title, $price, Category $category, $description, $weight, $availability = null)
     {
         parent::__construct($image, $title, $price, $category);
         $this->description = $description;

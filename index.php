@@ -29,7 +29,7 @@ require __DIR__ . '/data.php';
                             <h6 class="card-subtitle mb-2 text-muted"><?php echo isset($prodotto->weight) ? "Peso: " . $prodotto->weight : "" . "<br>"; ?></h6>
                             <h6 class="card-subtitle mb-2 text-muted"><?php echo isset($prodotto->size) ? "Dimensioni: " . $prodotto->size : "" . "<br>"; ?></h6>
                             <?php
-                            echo "DIsponibile: " .  $prodotto->isAvailable();
+                            echo "DIsponibile: " .  $prodotto->availability;
                             ?>
                             <h5><?= $prodotto->price ?></h5>
                         </div>

@@ -11,7 +11,7 @@ class Cuccia extends Prodotto
     public $size;
     use Disponibilità;
 
-    public function __construct($image, $title, $price, Category $category, $description, $color, $size,  $availability)
+    public function __construct($image, $title, $price, Category $category, $description, $color, $size,  $availability = null)
     {
         parent::__construct($image, $title, $price, $category);
         $this->description = $description;
